@@ -325,6 +325,8 @@ extension Locale {
     
     /// Returns the `preferredLanguages` objects as `Locale` objects
     static var preferredLocales: [Locale] {
+        let preferredLanguage = Locale.preferredLanguages.first ?? "en"
+        // print("Preferred Language: \(preferredLanguage)")
         return Locale.preferredLanguages.map { Locale(identifier: $0) }
     }
     
