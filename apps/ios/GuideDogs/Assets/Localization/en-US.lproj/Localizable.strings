@@ -900,6 +900,12 @@
 /* Text displayed when street preview is disabled */
 "location_detail.action.preview.hint.disabled" = "Street Preview is disabled while route guidance is active.";
 
+/* Text label for the action to launch NaviLens */
+"navilens.title" = "Launch NaviLens";
+
+/* Voiceover hint for the action to launch NaviLens */
+"location_detail.action.navilens.hint" = "Double tap to launch NaviLens.";
+
 /* Voiceover hint for the action to get directions */
 "location_detail.action.directions.hint" = "Double tap to open this location in an external maps app.";
 
@@ -2253,6 +2259,9 @@
 /* Message indicating that the app has successfully been connected to a head tracking headset, {NumberedPlaceholder="AirPods","Soundscape"} */
 "devices.explain_ar.connected.airpods" = "Your AirPods are ready for use, so you can put your phone in your pocket and go! Soundscape is tracking the direction of your head so you do not need to hold the phone in your hand.";
 
+/* Message indicating that the app has successfully been connected to Bose Frames */
+"devices.explain_ar.connected.boseframes" = "Your Bose Frames are ready for use, so you can put your phone in your pocket and go! Soundscape is tracking the direction of your head so you do not need to hold the phone in your hand.";
+
 /* Message indicating that the app has successfully been paired to head tracking headphones but is not connected, %@ headset name, "Soundscape is not currently connected to your AirPods Pro. Please ensure your headset is turned on and near your phone." {NumberedPlaceholder="%@"} */
 "devices.explain_ar.paired" = "Soundscape is not currently connected to your %@. Please ensure your headphones are turned on and near your phone.";
 
@@ -2294,6 +2303,9 @@
 
 /* Message displayed to the user after they successfully connect Soundscape to their AR headset. {NumberedPlaceholder="AirPods", "Soundscape"} */
 "devices.connect_headset.completed.airpods" = "Congratulations! Your AirPods are ready for use, so you can put your phone in your pocket and go! Soundscape will now track the direction of your head so you do not need to hold the phone in your hand. A single click on the headphones button will mute or unmute the beacon, double click will call out your location, and a triple click will repeat the last callout.";
+
+/* D.o for Bose Frame (Rondo) */
+"devices.connect_headset.completed.boseframes" = "Congratulations! Your Bose Frames are ready for use, so you can put your phone in your pocket and go! Soundscape will now track the direction of your head so you do not need to hold the phone in your hand.";
 
 /* Button label for a button that allows users to test their newly connected headset */
 "devices.connect_headset.completed.test" = "Check Your Headphones";
@@ -2342,6 +2354,14 @@
 
 /* Status announcement when Soundscape is trying to listen to heading updates from AirPods but they are not currently connected. {NumberedPlaceholder="AirPods", "Soundscape"} */
 "devices.callouts.check_audio.airpods.disconnected" = "Soundscape is searching for your AirPods. Ensure they are connected to your phone.";
+
+/*  */
+"devices.callouts.check_audio.bose_frames" = "Bose Frames connected.";
+
+
+/*  */
+"devices.callouts.check_audio.bose_frames.disconnected" = "Soundscape is searching for your Bose Frames. Ensure they are connected to your phone.";
+
 
 /* Label of a button that allows users to force Soundscape to reconnect to their AirPods Pro device if it isn't connecting automatically */
 "devices.troubleshoot.reconnect" = "Reconnect";
@@ -2678,7 +2698,7 @@
 "tutorial.beacons.text.BeaconOutOfBoundsConfirmation" = "Perfect, you are now facing in the direction of @!destination!!.";
 
 /* Tutorial, Beacon in bounds sound. {NumberedPlaceholder="@!destination!!"} */
-"tutorial.beacons.text.BeaconInBounds" = "If you listen carefully you will hear that it is playing from right in front of you and that there is a bell sound in addition to the normal beacon sound. That is because you are facing directly towards @!destination!!";
+"tutorial.beacons.text.BeaconInBounds" = "If you listen carefully you will hear that it is playing from right in front of you and that there is a bell sound in addition to the normal beacon sound. That is because you are facing directly towards @!destination!!.";
 
 /* Tutorial, Beacon in of Bounds sound change when phone is rotated. {NumberedPlaceholder="@!destination!!"} */
 "tutorial.beacons.text.BeaconInBoundsRotate" = "Now try to slowly turn away from the direction of the beacon, while still holding your phone flat. The bell sound will stop and the beacon continues to show you where @!destination!! is. Give it a try now.";
@@ -2719,6 +2739,9 @@
 
 /* Help title, Links to a help page that describes how to use Apple AirPods headphones with Soundscape, {NumberedPlaceholder="Apple AirPods"} */
 "help.using_headsets.airpods.title" = "Using Apple AirPods";
+
+/* Help title, Links to a help page that describes how to use Bose Frames headphones with Soundscape, {NumberedPlaceholder="Bose Frames"} */
+"help.using_headsets.bose_frames.title" = "Using Bose Frames";
 
 /* Help section title. This section contains help articles on the audio beacon and the automatic callout features. */
 "settings.help.section.beacons_and_pois" = "Beacons and Callouts";
@@ -3111,7 +3134,7 @@
 "help.text.routes.content.how.3" = "<b>Sharing a route</b>:<br/> Select your route on the \"Markers & Routes\" page and then select the option to \"Share\" using all of the usual share options available to you.";
 
 /* Help content describing how Apple AirPods work with Soundscape and which versions are supported {NumberedPlaceholder="Soundscape","AirPods"} */
-"help.using_headsets.airpods.what" = "Soundscape supports spatial audio with dynamic head tracking when using compatible AirPods. When connected to Soundscape, sensors in the AirPods tell Soundscape the direction your head is facing. This helps Soundscape to improve your audio experience making it more natural as you move around in the world. When you use Soundscape with AirPods connected, you do not need to hold your phone for Soundscape to work correctly.";
+"help.using_headsets.airpods.what" = "Soundscape supports spatial audio with dynamic head tracking when using compatible AirPods. When connected to Soundscape, sensors in the AirPods tell Soundscape the direction your head is facing. This helps Soundscape to improve your audio experience, making it more natural as you move around in the world. When you use Soundscape with AirPods connected, you do not need to hold your phone for Soundscape to work correctly.";
 
 /* Information on when users can use Apple AirPods headphones with Soundscape, {NumberedPlaceholder="Soundscape","AirPods"} */
 "help.using_headsets.airpods.when" = "You can use AirPods with Soundscape anytime you would normally use Soundscape. Using AirPods provides you with high quality audio and allows you to have a more hands-free experience with Soundscape.";
@@ -3120,7 +3143,25 @@
 "help.using_headsets.airpods.how.1" = "<b>Connecting a Device</b>:<br/> Go to the \"Head Tracking Headphones\" item in the Soundscape menu to connect your AirPods and follow the instructions on screen. Note that you will need to pair your AirPods to your phone in the Bluetooth settings before connecting them in Soundscape.";
 
 /* Information on how to use the media buttons on Apple AirPods with Soundscape (e.g. clicking the pressure sensor on one of the AirPods for play/pause), Quotes written as \", "Using Media Controls" should be translated the same as string with key "help.remote.page_title", {NumberedPlaceholder="Soundscape","AirPods"} */
-"help.using_headsets.airpods.how.2" = "<b>Using the Media Controls on your Headphones</b>:<br/> When media controls are enabled in the Soundscape settings, you can use the media controls on your AirPods to mute or unmute the beacon, call out your location or to repeat the last callout. For more information, see the \"Using Media Controls\" help section.";
+"help.using_headsets.airpods.how.2" = "<b>Using the Media Controls on your Headphones</b>:<br/> When media controls are enabled in the Soundscape settings, you can use the media controls on your AirPods to mute or unmute the beacon, to call out your location or to repeat the last callout. For more information, see the \"Using Media Controls\" help section.";
+
+/* Help content describing how Bose Frames work with Soundscape and which versions are supported {NumberedPlaceholder="Soundscape","Bose Frames"} */
+"help.using_headsets.bose_frames.what" = "Soundscape supports spatial audio with dynamic head tracking when using the Alto or Rondo versions of the Bose Frames. When connected to Soundscape, sensors in the Bose Frames tell Soundscape the direction your head is facing. This helps Soundscape to improve your audio experience, making it more natural as you move around in the world. When you use Soundscape with Bose Frames connected, you do not need to hold your phone for Soundscape to work correctly.";
+
+/* Information on when users can use Bose Frames headphones with Soundscape, {NumberedPlaceholder="Soundscape","Bose Frames"} */
+"help.using_headsets.bose_frames.when" = "You can use Bose Frames with Soundscape anytime you would normally use Soundscape. Using Bose Frames provides you with high quality audio that does not occlude environmental audio and allows you to have a more hands-free experience with Soundscape.";
+
+/* Information on how to connect Bose Frames with Soundscape, "Head Tracking Headphones" should be translated the same as the string with key "menu.devices", {NumberedPlaceholder="Soundscape","Bose Frames"} */
+"help.using_headsets.bose_frames.how.1" = "<b>Connecting a Device</b>:<br/> Go to the \"Head Tracking Headphones\" item in the Soundscape menu to connect your Bose Frames and follow the instructions on screen. Note that you will need to pair your Bose Frames to your phone in the Bluetooth settings before connecting them in Soundscape.";
+
+/* information on how to calibrate Bose Frames with Soundscape, Quotes written as \", {NumberedPlaceholder="Soundscape","Bose Frames"} */
+"help.using_headsets.bose_frames.how.2" = "<b>Calibrating your Headphones</b>:<br/> Your Bose Frames will need to be calibrated to accurately know which way you are facing. Each time you connect them to Soundscape, you will be informed that calibration is needed by an audio chime. To calibrate your Bose Frames, follow the instructions provided on the screen. When the calibration chime stops playing, Your Bose Frames are calibrated, and Soundscape will now track the direction of your head so you do not need to hold the phone in your hand. You can also repeat this calibration at any time, even if the chime isn't playing, if you think the accuracy of your spatial audio is poor.";
+
+/* Information on how to use the media buttons on Bose Frames  */
+"help.using_headsets.bose_frames.how.3" = "<b>Using the Media Controls on your Headphones</b>:<br/> When media controls are enabled in the Soundscape settings, you can use the media controls on your Bose Frames to mute or unmute the beacon, to call out your location or to repeat the last callout. For more information, see the \"Using Media Controls\" help section.";
+
+/* Trouble shooting information for Bose Frames */
+"help.using_headsets.bose_frames.how.4" = "<b>Troubleshooting your headphones</b>:<br>If you are having trouble connecting your Bose Frames to Soundscape, ensure they are one of the supported models in Soundscape - the Altos or Rondos. If they are one of these models, then ensure that the Frames are appearing in the Bose Connect app. If they are showing and you are still having trouble with the connection, try unpairing and re-pairing the headphones via your phone's Bluetooth menu.<br>Support for the Bose Frames is new and we would love to hear your feedback. You can contact us by choosing the \"Send Feedback\" Option in the menu.";
 
 //------------------------------------------------------------------------------
 // MARK: - OSM Tags
@@ -3422,9 +3463,17 @@
 /* Description of the categories in places nearby feature */
 "whats_new.1_2_0.2.description" = "You can now filter the places nearby list by categories such as public transport, Food & Drink, etc.";
 
-/* Description of how users can download new voices. "Settings" and "Spoken Content" should be translated in the same way they are translated in the iOS Settings app. {NumberedPlaceholder="iOS"} */
-"whats_new.3_2_0.2.description" = "Additional voices, including enhanced quality voices, can be downloaded in the Spoken Content section of the iOS accessibility settings.";
+/* Title of the Bose Frames support feature */
+"whats_new.1_3_0.0.title" = "Bose Frames Support";
 
+/* Description of the Bose Frames support feature */
+"whats_new.1_3_0.0.description" = "Soundscape now supports spatial audio with dynamic head tracking when using the Alto or Rondo versions of the Bose Frames. When connected to Soundscape, sensors in the Bose Frames tell Soundscape the direction your head is facing. This helps Soundscape to improve your audio experience, making it more natural as you move around in the world. When you use Soundscape with Bose Frames connected, you do not need to hold your phone for Soundscape to work correctly. To get started, go to the \"Head Tracking Headphones\" item in the Soundscape menu to connect your Bose Frames and follow the instructions on screen. Note that you will need to pair your Bose Frames to your phone in the Bluetooth settings before connecting them in Soundscape.";
+
+/* Title of the request for testing in Texas */
+"whats_new.1_3_0.1.title" = "Testing in Texas";
+
+/* Description of the request for testing in Texas */
+"whats_new.1_3_0.1.description" = "If you live in the Austin or San Antonio areas in Texas and would like to help us test a feature we are working on with NaviLens, please get in touch via the Send Feedback button from the main menu.";
 // MARK: - FAQs
 
 /* Title of the Frequently Asked Questions page */
