@@ -38,6 +38,8 @@ class FirstUseExperience {
         // one beacon of the given style (e.g., standard and haptic style)
         case oobeSelectBeacon(style: BeaconOption.Style)
         
+        case selectedLanguage
+        
         fileprivate var key: String {
             // Define a `UserDefaults` key for each first-use experience
             switch self {
@@ -54,10 +56,26 @@ class FirstUseExperience {
             case .share: return "GDAFirstUseExperienceShare"
             case .donateSiriShortcuts: return "GDAFirstUseExperienceDonateSiriShortcuts"
             case .oobeSelectBeacon(let style): return "GDAOOBEDidSelectBeacon_" + style.rawValue
+            case .selectedLanguage:
+                return "GDASelectedLanguage"
             }
         }
     }
     
+    // Function to save user preferred language
+    func saveUserPreferredLanguage(_ language: String) {
+        // Save the language in UserDefaults
+        UserDefaults.standard.set(language, forKey: FirstUseExperience.Experience.selectedLanguage.key)
+        
+        // Mark the selectedLanguage experience as completed
+        FirstUseExperience.setDidComplete(true, for: .selectedLanguage)
+    }
+
+    // Function to retrieve the user preferred language
+    func getUserPreferredLanguage() -> String? {
+        return UserDefaults.standard.string(forKey: FirstUseExperience.Experience.selectedLanguage.key)
+    }
+
     // MARK: User Default Accessors
     
     static func didComplete(_ experience: Experience) -> Bool {
