@@ -49,6 +49,11 @@ struct OnboardingWelcomeView: View {
         }
         .accentColor(.primaryForeground)
         .onAppear {
+            print("🚀 OnboardingWelcomeView appeared!") // Debug statement
+            
+            print("Device Locale: \(LocalizationContext.deviceLocale.identifierHyphened)")
+            print("App Locale: \(LocalizationContext.currentAppLocale.identifierHyphened)")
+            
             GDATelemetry.trackScreenView("onboarding.welcome")
             
             // If onboarding has already been completed,

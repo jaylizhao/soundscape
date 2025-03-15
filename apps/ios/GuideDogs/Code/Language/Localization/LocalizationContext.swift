@@ -106,11 +106,11 @@ class LocalizationContext {
             return currentAppLocale
         }
         set(newLocale) {
-            // Set the preferred language (in this case, you can set to English, "en")
-                    let preferredLanguage = "fr"  // Change this to your desired language code (e.g., "fr" for French)
-                    
-                    // Override the newLocale with the preferred language
-                    let locale = Locale(identifier: preferredLanguage)
+//            // Set the preferred language (in this case, you can set to English, "en")
+//                    let preferredLanguage = "fr"  // Change this to your desired language code (e.g., "fr" for French)
+//                    
+//                   // Override the newLocale with the preferred language
+//                    let locale = Locale(identifier: preferredLanguage)
             
             SettingsContext.shared.locale = newLocale
             _currentAppLocale = newLocale

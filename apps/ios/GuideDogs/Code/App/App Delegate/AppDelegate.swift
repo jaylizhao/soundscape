@@ -41,6 +41,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             SettingsContext.shared.appUseCount += 1
         }
         
+        checkLanguageSettings()
+        
         // Note: Remainder of app initialization is handled in DynamicLaunchViewController.swift and LaunchHelper.swift...
         // DO NOT reference `AppContext.shared` until the notification `Notification.Name.appDidInitialize` is posted
         
@@ -50,6 +52,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
+    
+    func checkLanguageSettings() {
+            let systemLanguage = Locale.preferredLanguages.first ?? "en"
+            let appLanguage = (UserDefaults.standard.array(forKey: "AppleLanguages") as? [String])?.first ?? "en"
+
+            if systemLanguage != appLanguage {
+                // Show the alert to prompt user to change language
+                if let rootViewController = window?.rootViewController {
+                    //let languageCheckVC = 
+                    rootViewController.present(languageCheckVC, animated: true)
+                }
+            }
+        }
 
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
         return userActivityManager.onContinueUserActivity(userActivity)
