@@ -117,7 +117,6 @@
 		286D18AA206AC31E006D1925 /* NewFeaturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D18A9206AC31E006D1925 /* NewFeaturesViewController.swift */; };
 		286D18AE206B1A48006D1925 /* FeaturePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D18AC206B1A48006D1925 /* FeaturePageViewController.swift */; };
 		286D18AF206B1A48006D1925 /* FeaturePageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 286D18AD206B1A48006D1925 /* FeaturePageView.xib */; };
-		286D18B5206C03FE006D1925 /* NewFeatures.plist in Resources */ = {isa = PBXBuildFile; fileRef = 286D18B4206C03FE006D1925 /* NewFeatures.plist */; };
 		286D18B7206C0F55006D1925 /* NewFeatures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D18B6206C0F55006D1925 /* NewFeatures.swift */; };
 		286DA3A81F9E6B3100C34C9C /* BorderedIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286DA3A71F9E6B3100C34C9C /* BorderedIcon.swift */; };
 		286DC69821E6811A001CD88A /* AuthoredActivityContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286DC69721E6811A001CD88A /* AuthoredActivityContent.swift */; };
@@ -543,6 +542,11 @@
 		91C82AAD2A5DCF040086D126 /*  GeolocationManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C82AAC2A5DCF040086D126 /*  GeolocationManagerTest.swift */; };
 		91C82ABE2A6B08500086D126 /* RouteGuidanceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C82ABD2A6B08500086D126 /* RouteGuidanceTest.swift */; };
 		91DC0CF92A46134600244CC8 /* GeometryUtilsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914DEBDC2A3CE901007B161C /* GeometryUtilsTest.swift */; };
+		9A6990742D5BDB8900D37B7D /* BoseSensorConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A69906F2D5BDB8900D37B7D /* BoseSensorConfiguration.swift */; };
+		9A6990752D5BDB8900D37B7D /* BoseSensorDataProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6990702D5BDB8900D37B7D /* BoseSensorDataProcessor.swift */; };
+		9A6990762D5BDB8900D37B7D /* BoseFramesBLEDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A69906E2D5BDB8900D37B7D /* BoseFramesBLEDevice.swift */; };
+		9A6990782D5BDC1D00D37B7D /* BoseFramesMotionManagerReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6990772D5BDC1D00D37B7D /* BoseFramesMotionManagerReachability.swift */; };
+		9A69907B2D5BDC5E00D37B7D /* BoseFramesMotionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A69907A2D5BDC5E00D37B7D /* BoseFramesMotionManager.swift */; };
 		AC3A3EE22C40C9080061EEB8 /* NearbyTableFilterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3A3EE12C40C9080061EEB8 /* NearbyTableFilterTest.swift */; };
 		B90C27D61EAF81D600007368 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90C27D51EAF81D600007368 /* Sound.swift */; };
 		B918EE9825100FFF00A5354A /* CalloutRangeContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B918EE9725100FFF00A5354A /* CalloutRangeContext.swift */; };
@@ -594,6 +598,8 @@
 		B9EE98081E3656B7007ADBED /* UIDeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EE98071E3656B7007ADBED /* UIDeviceManager.swift */; };
 		B9F0F96B1E10A40700F32F70 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F0F96A1E10A40700F32F70 /* BaseTableViewController.swift */; };
 		B9F749A21F16153900DC10C6 /* CoreLocation+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F749A11F16153900DC10C6 /* CoreLocation+Extensions.swift */; };
+		BD2726862D6EA01C0022654B /* Integrations.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2726852D6EA0110022654B /* Integrations.swift */; };
+		BDB661182D7BA8BB00D80302 /* sense_navilens.wav in Resources */ = {isa = PBXBuildFile; fileRef = BDB661172D7BA8BB00D80302 /* sense_navilens.wav */; };
 		C3060705205C544E00C39489 /* AddressGeocoderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3060704205C544E00C39489 /* AddressGeocoderProtocol.swift */; };
 		C306DF8522F0D71300248E9F /* CompoundFilterPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C306DF8422F0D71300248E9F /* CompoundFilterPredicate.swift */; };
 		C30DBD2023A2C19400082B27 /* SearchResultsUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30DBD1F23A2C19400082B27 /* SearchResultsUpdater.swift */; };
@@ -752,6 +758,7 @@
 		D30355D31B61401D00E1DDED /* GDAJSONObject.m in Sources */ = {isa = PBXBuildFile; fileRef = D30355D21B61401D00E1DDED /* GDAJSONObject.m */; };
 		D395B0F71B41DA15005A6407 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D395B0F61B41DA15005A6407 /* Images.xcassets */; };
 		DCAAD87F2BC1E95F0018D135 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = DCAAD87E2BC1E95F0018D135 /* PrivacyInfo.xcprivacy */; };
+		DCE4D2AD2D7CE40F00B5DA4B /* NewFeatures.json in Resources */ = {isa = PBXBuildFile; fileRef = DCE4D2AC2D7CE40F00B5DA4B /* NewFeatures.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -882,7 +889,6 @@
 		286D18A9206AC31E006D1925 /* NewFeaturesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewFeaturesViewController.swift; path = "Code/Visual UI/Controls/New Feature Announcement/NewFeaturesViewController.swift"; sourceTree = "<group>"; };
 		286D18AC206B1A48006D1925 /* FeaturePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FeaturePageViewController.swift; path = "Code/Visual UI/Controls/New Feature Announcement/FeaturePageViewController.swift"; sourceTree = "<group>"; };
 		286D18AD206B1A48006D1925 /* FeaturePageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = FeaturePageView.xib; path = "Code/Visual UI/Controls/New Feature Announcement/FeaturePageView.xib"; sourceTree = "<group>"; };
-		286D18B4206C03FE006D1925 /* NewFeatures.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = NewFeatures.plist; path = Assets/PropertyLists/NewFeatures.plist; sourceTree = "<group>"; };
 		286D18B6206C0F55006D1925 /* NewFeatures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewFeatures.swift; path = Code/App/Settings/NewFeatures.swift; sourceTree = "<group>"; };
 		286DA3A71F9E6B3100C34C9C /* BorderedIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BorderedIcon.swift; path = "Code/Visual UI/Controls/BorderedIcon.swift"; sourceTree = "<group>"; };
 		286DC69721E6811A001CD88A /* AuthoredActivityContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthoredActivityContent.swift; sourceTree = "<group>"; };
@@ -1332,6 +1338,11 @@
 		915FF9F42ADE3F91002B3690 /* AuthoredActivityContentTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthoredActivityContentTest.swift; sourceTree = "<group>"; };
 		91C82AAC2A5DCF040086D126 /*  GeolocationManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = " GeolocationManagerTest.swift"; path = "UnitTests/Sensors/Geolocation/Geolocation Manager/ GeolocationManagerTest.swift"; sourceTree = SOURCE_ROOT; };
 		91C82ABD2A6B08500086D126 /* RouteGuidanceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RouteGuidanceTest.swift; path = "UnitTests/Behaviors/Route Guidance/RouteGuidanceTest.swift"; sourceTree = SOURCE_ROOT; };
+		9A69906E2D5BDB8900D37B7D /* BoseFramesBLEDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BoseFramesBLEDevice.swift; path = Code/Devices/BLE/BoseFramesBLEDevice.swift; sourceTree = "<group>"; };
+		9A69906F2D5BDB8900D37B7D /* BoseSensorConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BoseSensorConfiguration.swift; path = Code/Devices/BLE/BoseSensorConfiguration.swift; sourceTree = "<group>"; };
+		9A6990702D5BDB8900D37B7D /* BoseSensorDataProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BoseSensorDataProcessor.swift; path = Code/Devices/BLE/BoseSensorDataProcessor.swift; sourceTree = "<group>"; };
+		9A6990772D5BDC1D00D37B7D /* BoseFramesMotionManagerReachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BoseFramesMotionManagerReachability.swift; path = "Code/Sensors/Motion/Headphone Motion/BoseFramesMotionManagerReachability.swift"; sourceTree = "<group>"; };
+		9A69907A2D5BDC5E00D37B7D /* BoseFramesMotionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BoseFramesMotionManager.swift; path = "Code/Sensors/Motion/Headphone Motion/BoseFramesMotionManager.swift"; sourceTree = "<group>"; };
 		AC3A3EE12C40C9080061EEB8 /* NearbyTableFilterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyTableFilterTest.swift; sourceTree = "<group>"; };
 		B90C27D51EAF81D600007368 /* Sound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Sound.swift; path = Code/Audio/Protocols/Sound.swift; sourceTree = "<group>"; };
 		B918EE9725100FFF00A5354A /* CalloutRangeContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalloutRangeContext.swift; sourceTree = "<group>"; };
@@ -1392,6 +1403,8 @@
 		B9EE98071E3656B7007ADBED /* UIDeviceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIDeviceManager.swift; path = Code/Devices/UIDeviceManager.swift; sourceTree = "<group>"; };
 		B9F0F96A1E10A40700F32F70 /* BaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseTableViewController.swift; path = "Code/Visual UI/View Controllers/BaseTableViewController.swift"; sourceTree = "<group>"; };
 		B9F749A11F16153900DC10C6 /* CoreLocation+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CoreLocation+Extensions.swift"; path = "Code/App/Framework Extensions/Geo Extensions/CoreLocation+Extensions.swift"; sourceTree = "<group>"; };
+		BD2726852D6EA0110022654B /* Integrations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Integrations.swift; sourceTree = "<group>"; };
+		BDB661172D7BA8BB00D80302 /* sense_navilens.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = sense_navilens.wav; path = Assets/Sounds/sense_navilens.wav; sourceTree = "<group>"; };
 		C3060704205C544E00C39489 /* AddressGeocoderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddressGeocoderProtocol.swift; path = Code/Generators/Geocoding/Protocols/AddressGeocoderProtocol.swift; sourceTree = "<group>"; };
 		C306DF8422F0D71300248E9F /* CompoundFilterPredicate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CompoundFilterPredicate.swift; path = Code/Data/Models/Helpers/Filter/CompoundFilterPredicate.swift; sourceTree = "<group>"; };
 		C30DBD1F23A2C19400082B27 /* SearchResultsUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsUpdater.swift; sourceTree = "<group>"; };
@@ -1563,6 +1576,7 @@
 		D3D7CFC81B3D96470020B5E9 /* Soundscape.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Soundscape.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3E2A6361CAD5CA100A5192A /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		DCAAD87E2BC1E95F0018D135 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = Assets/PropertyLists/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		DCE4D2AC2D7CE40F00B5DA4B /* NewFeatures.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = NewFeatures.json; path = Assets/NewFeatures.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -1966,6 +1980,7 @@
 		286A2AE4225541A300A74724 /* BLE */ = {
 			isa = PBXGroup;
 			children = (
+				3DD63B5D2B9906CC00E4A159 /* Bose Frames */,
 				286A2AE22252B8A300A74724 /* BLEManager.swift */,
 				286A2AE62255432500A74724 /* BLEDevice.swift */,
 				289E2EFA234FE39F00357444 /* BaseBLEDevice.swift */,
@@ -2033,6 +2048,7 @@
 		2870DA7920447DED00971F75 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				BD2726852D6EA0110022654B /* Integrations.swift */,
 				28A16137283D8C1F0081CFA4 /* Themes */,
 				62494FFD26FBE078008D842B /* View Controller Representable */,
 				626BB5922682561E00E5355A /* Labels & Text Views */,
@@ -2203,6 +2219,7 @@
 		28952D43228F6A9200FC91B4 /* Effects */ = {
 			isa = PBXGroup;
 			children = (
+				BDB661172D7BA8BB00D80302 /* sense_navilens.wav */,
 				2809B80F2379E9C700F6C9AC /* low_confidence.wav */,
 				2809B80D2379E9A000F6C9AC /* connection_success.wav */,
 				2809B80B2379E95B00F6C9AC /* calibration_success.wav */,
@@ -2650,6 +2667,16 @@
 			);
 			name = Localization;
 			path = Assets/Localization;
+			sourceTree = "<group>";
+		};
+		3DD63B5D2B9906CC00E4A159 /* Bose Frames */ = {
+			isa = PBXGroup;
+			children = (
+				9A69906E2D5BDB8900D37B7D /* BoseFramesBLEDevice.swift */,
+				9A69906F2D5BDB8900D37B7D /* BoseSensorConfiguration.swift */,
+				9A6990702D5BDB8900D37B7D /* BoseSensorDataProcessor.swift */,
+			);
+			name = "Bose Frames";
 			sourceTree = "<group>";
 		};
 		4AD48659F673FA58D2DF2C07 /* Frameworks */ = {
@@ -3102,6 +3129,7 @@
 			children = (
 				627004E326055A4300FBF5E5 /* HeadphoneMotionManagerReachability.swift */,
 				627004EB26055A5500FBF5E5 /* HeadphoneMotionReachabilityWrapper.swift */,
+				9A6990772D5BDC1D00D37B7D /* BoseFramesMotionManagerReachability.swift */,
 			);
 			name = Reachability;
 			sourceTree = "<group>";
@@ -3321,6 +3349,7 @@
 				627004E226055A2900FBF5E5 /* Reachability */,
 				620BC33425F2A9F1007DBA29 /* Calibration */,
 				62B455632583FF8900665131 /* HeadphoneMotionManager.swift */,
+				9A69907A2D5BDC5E00D37B7D /* BoseFramesMotionManager.swift */,
 				620BC32F25F2A94C007DBA29 /* HeadphoneMotionManagerWrapper.swift */,
 				620BC33E25F2CC98007DBA29 /* HeadphoneMotionManagerStatus.swift */,
 			);
@@ -4322,6 +4351,7 @@
 		D378E0EB1B3D98D800909E29 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				DCE4D2AC2D7CE40F00B5DA4B /* NewFeatures.json */,
 				62E2B87925AE5BD50008AF5D /* Configurations */,
 				6238E1732508468100124167 /* Animations */,
 				28BBFE8B2433BD2F00A01F15 /* Colors */,
@@ -4374,7 +4404,6 @@
 			children = (
 				B9546B211E54AB36002776D4 /* Soundscape.entitlements */,
 				D395B0FE1B431E08005A6407 /* Info.plist */,
-				286D18B4206C03FE006D1925 /* NewFeatures.plist */,
 				3150EC4221FA731800F6EB3A /* StreetSuffixAbbreviations_en.plist */,
 				31F12C4122569E9100BDA072 /* StreetSuffixAbbreviations_fr.plist */,
 				DCAAD87E2BC1E95F0018D135 /* PrivacyInfo.xcprivacy */,
@@ -4614,7 +4643,6 @@
 				2839B5E926E98051003B6AC6 /* Symbols.xcassets in Resources */,
 				2872D12F26D80B6C000BE465 /* Signal_Slow_A.wav in Resources */,
 				2872D13326D80BC6000BE465 /* Signal_Very_Slow_A.wav in Resources */,
-				286D18B5206C03FE006D1925 /* NewFeatures.plist in Resources */,
 				28CD232D275ABFD2006C9901 /* sense_safety.wav in Resources */,
 				28952D36228DBC6500FC91B4 /* hush.wav in Resources */,
 				28467F04264365B700FB4C9F /* Proximity_Far.wav in Resources */,
@@ -4682,12 +4710,14 @@
 				2896376F26D6E39D001694C0 /* Tactile_OffAxis.wav in Resources */,
 				C3BF661F2204DA4C00F28130 /* RouteGuidanceActiveBanner.xib in Resources */,
 				316B3F6C2283924E0025526D /* InfoPlist.strings in Resources */,
+				DCE4D2AD2D7CE40F00B5DA4B /* NewFeatures.json in Resources */,
 				280AFCD72295C77000012BEA /* online.wav in Resources */,
 				2809B80C2379E95B00F6C9AC /* calibration_success.wav in Resources */,
 				6238E178250846C300124167 /* Welcome2.gif in Resources */,
 				2872D14226D80C7D000BE465 /* Mallet_Very_Slow_A+.wav in Resources */,
 				282B62F124EC4FA6007E5F8A /* SS_logo4_48k.wav in Resources */,
 				2872D12D26D80B6C000BE465 /* Signal_Slow_Behind.wav in Resources */,
+				BDB661182D7BA8BB00D80302 /* sense_navilens.wav in Resources */,
 				28467F08264365B700FB4C9F /* Proximity_Close.wav in Resources */,
 				2F4433001D36B5A300CA437D /* licenses.html in Resources */,
 				2872D13526D80BC6000BE465 /* Signal_Very_Slow_Behind.wav in Resources */,
@@ -4832,6 +4862,7 @@
 				624C969B28514783001F84F8 /* MapViewController.swift in Sources */,
 				28863A7624C8FC1E00194458 /* ConcatenatedSound.swift in Sources */,
 				288E632224B5014900F66EA6 /* AdjacentDataView.swift in Sources */,
+				BD2726862D6EA01C0022654B /* Integrations.swift in Sources */,
 				31BE8E1E1DDA4941005858C7 /* AnimatedBarButtonItem.swift in Sources */,
 				31569D2B20EBF6CA00FD7B35 /* MarkerTutorialViewController.swift in Sources */,
 				623D3B26263B29640005F405 /* FirstUseExperience.swift in Sources */,
@@ -4893,6 +4924,9 @@
 				28E60D441FE4905F00EAB5C0 /* CompassDirection.swift in Sources */,
 				319A3C152257C94C0098E94E /* StringDebug.swift in Sources */,
 				28F94F5E2485AE0A0010D2B3 /* BehaviorBase.swift in Sources */,
+				9A6990742D5BDB8900D37B7D /* BoseSensorConfiguration.swift in Sources */,
+				9A6990752D5BDB8900D37B7D /* BoseSensorDataProcessor.swift in Sources */,
+				9A6990762D5BDB8900D37B7D /* BoseFramesBLEDevice.swift in Sources */,
 				28A16134283D86E70081CFA4 /* TourWaypointDetail.swift in Sources */,
 				288941B1207815FB00CAA6D4 /* AdjustableLabel.swift in Sources */,
 				62E92B3626546361001C5AC2 /* URLResourceIdentifier.swift in Sources */,
@@ -4951,6 +4985,7 @@
 				62403FEE24CA3F75005CB80D /* PreviewViewController.swift in Sources */,
 				62494FFC26FAAFD1008D842B /* ShareRouteAlertObserver.swift in Sources */,
 				286C825A20C99CD800BB17B0 /* TableViewCellAccessibilityAction.swift in Sources */,
+				9A69907B2D5BDC5E00D37B7D /* BoseFramesMotionManager.swift in Sources */,
 				283C057E23DB6D990086C01F /* DynamicSound.swift in Sources */,
 				281D59D31F4765880090F23A /* FirstLaunchTermsStepViewController.swift in Sources */,
 				284C9AFB23886DD000CBA392 /* DynamicAudioEngineAsset.swift in Sources */,
@@ -5017,6 +5052,7 @@
 				C3E9B80F224948B700E1E0E0 /* LargeBannerContainerView.swift in Sources */,
 				28F1B48F1F683D37008A4F3B /* HelpPageViewController.swift in Sources */,
 				623557A024DCDB3400266D9D /* PreviewActivityIndicatorViewController.swift in Sources */,
+				9A6990782D5BDC1D00D37B7D /* BoseFramesMotionManagerReachability.swift in Sources */,
 				281CB8812016B4650059B8C4 /* LocationCallout.swift in Sources */,
 				B921CE622559EB9F00F777CE /* PushNotificationManager.swift in Sources */,
 				28162B9C24CB50A300B05CCC /* SensorProvider.swift in Sources */,
@@ -5495,7 +5531,7 @@
 				CODE_SIGN_ENTITLEMENTS = GuideDogs/Assets/PropertyLists/SoundscapeDF.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				ENABLE_BITCODE = NO;
@@ -5526,7 +5562,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/GuideDogs",
 				);
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.3.0;
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited) -DADHOC";
 				PRODUCT_BUNDLE_IDENTIFIER = "services.soundscape-adhoc";
@@ -5784,7 +5820,7 @@
 				CODE_SIGN_ENTITLEMENTS = GuideDogs/Assets/PropertyLists/Soundscape.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = X4H33NKGKY;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
@@ -5816,7 +5852,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/GuideDogs",
 				);
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.3.0;
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited) -DDEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = "services.soundscape-debug";
@@ -5844,7 +5880,7 @@
 				CODE_SIGN_ENTITLEMENTS = GuideDogs/Assets/PropertyLists/Soundscape.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 29;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = X4H33NKGKY;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				ENABLE_BITCODE = NO;
@@ -5874,7 +5910,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/GuideDogs",
 				);
-				MARKETING_VERSION = 1.2.0;
+				MARKETING_VERSION = 1.3.0;
 				OTHER_LDFLAGS = "$(inherited)";
 				OTHER_SWIFT_FLAGS = "$(inherited) -DRELEASE";
 				PRODUCT_BUNDLE_IDENTIFIER = services.soundscape;
