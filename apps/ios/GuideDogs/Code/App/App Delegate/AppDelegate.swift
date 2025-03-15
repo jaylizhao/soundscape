@@ -41,10 +41,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             SettingsContext.shared.appUseCount += 1
         }
         
-
-        //checkLanguageSettings()
+<<<<<<< HEAD
+        checkLanguageSettings()
         
-
+=======
         // Testing FirstUseExperience functionality
         let firstUseExperience = FirstUseExperience()
 
@@ -62,7 +62,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let isSelectedLanguageCompleted = FirstUseExperience.didComplete(.selectedLanguage)
         print("Has the user completed the selected language experience? \(isSelectedLanguageCompleted)")  // Expected: true
 
-
+>>>>>>> 36c9a5888d4e9bfe4b7e85dd182d011b9eacb1d8
         // Note: Remainder of app initialization is handled in DynamicLaunchViewController.swift and LaunchHelper.swift...
         // DO NOT reference `AppContext.shared` until the notification `Notification.Name.appDidInitialize` is posted
         
