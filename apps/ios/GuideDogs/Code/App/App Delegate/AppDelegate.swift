@@ -40,28 +40,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         
         // Language check logic
-           if FirstUseExperience.didComplete(.oobe) && !FirstUseExperience.didComplete(.selectedLanguage) {
-               // Show language selection onboarding
-               let languageVC = UIHostingController(rootView: OnboardingLanguageView())
-               window?.rootViewController = languageVC
-               window?.makeKeyAndVisible()
-               return true
-           }
+        if FirstUseExperience.didComplete(.oobe) && !FirstUseExperience.didComplete(.selectedLanguage) {
+            // Show language selection onboarding
+            let languageVC = UIHostingController(rootView: OnboardingLanguageView())
+            window?.rootViewController = languageVC
+            window?.makeKeyAndVisible()
+            return true
+        }
         
         // Show your usual launch view controller
-           let mainVC = DynamicLaunchViewController() // ← Replace with your actual main VC if needed
-           window?.rootViewController = mainVC
-           window?.makeKeyAndVisible()
+        let mainVC = DynamicLaunchViewController() // ← Replace with your actual main VC if needed
+        window?.rootViewController = mainVC
+        window?.makeKeyAndVisible()
         
         if FirstUseExperience.didComplete(.oobe) {
             // Only increment app use count if the user has completed onboarding
             SettingsContext.shared.appUseCount += 1
         }
         
-//        checkLanguageSettings()
-//        
-//        // Language check logic for phone vs app language
-//        checkAndPromptForLanguage()
+        checkLanguageSettings()
+        
+        // Language check logic for phone vs app language
+        checkAndPromptForLanguage()
         
         // Testing FirstUseExperience functionality
         let firstUseExperience = FirstUseExperience()
@@ -89,20 +89,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
-//    
-//    func checkLanguageSettings() {
-//            let systemLanguage = Locale.preferredLanguages.first ?? "en"
-//            let appLanguage = (UserDefaults.standard.array(forKey: "AppleLanguages") as? [String])?.first ?? "en"
-//
-//            if systemLanguage != appLanguage {
-//                // Show the alert to prompt user to change language
-//                if let rootViewController = window?.rootViewController {
-//                    //let languageCheckVC = 
-//                    //rootViewController.present(languageCheckVC, animated: true)
-//                }
-//            }
-//        }
-//
+
+    func checkLanguageSettings() {
+            let systemLanguage = Locale.preferredLanguages.first ?? "en"
+            let appLanguage = (UserDefaults.standard.array(forKey: "AppleLanguages") as? [String])?.first ?? "en"
+
+            if systemLanguage != appLanguage {
+                // Show the alert to prompt user to change language
+                if (window?.rootViewController) != nil {
+                    //let languageCheckVC = 
+                    //rootViewController.present(languageCheckVC, animated: true)
+                }
+            }
+        }
 
     // MARK: - Language Check and Prompt
     private func checkAndPromptForLanguage() {
@@ -116,13 +115,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
+//    private func promptForLanguageChange() {
+//        // Show your language selection screen (OnboardingLanguageView)
+//        // For example:
+//        if let window = self.window {
+//            let languageView = OnboardingLanguageView()
+//            let languageViewController = UIHostingController(rootView: languageView)
+//            window.rootViewController?.present(languageViewController, animated: true, completion: nil)
+//        }
+//    }
+    
     private func promptForLanguageChange() {
-        // Show your language selection screen (OnboardingLanguageView)
-        // For example:
-        if let window = self.window {
-            let languageView = OnboardingLanguageView()
-            let languageViewController = UIHostingController(rootView: languageView)
-            window.rootViewController?.present(languageViewController, animated: true, completion: nil)
+        DispatchQueue.main.async {
+            if let window = self.window {
+                let languageView = OnboardingLanguageView()
+                let languageViewController = UIHostingController(rootView: languageView)
+
+                // Set language selection as the root so it's not dismissed immediately
+                window.rootViewController = languageViewController
+                window.makeKeyAndVisible()
+            }
         }
     }
 
