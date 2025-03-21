@@ -1,24 +1,28 @@
 # Copyright (c) Soundscape Community.
 # Licensed under the MIT License.
 """
-Convert CSV into expected format for non-OSM data ingestion.
+Convert GPX into expected format for non-OSM data ingestion.
+Suitable for routes exported from Authoring Tool.
 
 Example usage:
-    python convert_extra_data_csv.py input.csv output.csv
+    python convert_gpx.py input.gpx output.csv
 """
 
 import argparse
 import csv
+import xml.etree.ElementTree as ET
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("input_csv")
+    parser.add_argument("input_gpx")
     parser.add_argument("output_csv")
     args = parser.parse_args()
 
-    with open(args.input_csv, newline="") as f:
-        incsv = csv.DictReader(f)
+    namespace = {'gpx': 'http://www.topografix.com/GPX/1/1'}
+
+    with open(args.input_gpx, newline="") as gpx_file:
+        root = ET.fromstring(gpx_file.read())
 
         with open(args.output_csv, "w", newline="") as f:
             outcsv = csv.DictWriter(f, fieldnames=[
@@ -35,15 +39,16 @@ if __name__ == "__main__":
                 "blind:description",
             ])
             outcsv.writeheader()
-            for row in incsv:
+            for wpt in root.findall('gpx:wpt', namespace):
+                name_elem = wpt.find('gpx:name', namespace)
+                name = name_elem.text if name_elem is not None else None
+
                 outcsv.writerow({
-                    "latitude": row.pop("stop_lat"),
-                    "longitude": row.pop("stop_lon"),
+                    "latitude": wpt.get('lat'),
+                    "longitude": wpt.get('lon'),
 
                     #TODO Generalize beyond bus stops
-                    "name": "NaviLens available: " + (
-                        row.pop("stop_desc") or row.pop("stop_name")
-                    ),
+                    "name": "NaviLens available: " + name,
 
                     # Soundscape app expects these as top-level GeoJSON properties
                     "feature_type": "highway",
