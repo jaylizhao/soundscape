@@ -40,6 +40,11 @@ struct OnboardingLanguageView: View {
         }
     }
     
+    private func saveLanguageSelection() {
+        UserDefaults.standard.set(selectedLocale.identifier, forKey: "selectedLanguage")
+        NotificationCenter.default.post(name: NSNotification.Name("LanguageSelected"), object: nil)
+    }
+    
 }
 
 struct OnboardingLanguageView_Previews: PreviewProvider {

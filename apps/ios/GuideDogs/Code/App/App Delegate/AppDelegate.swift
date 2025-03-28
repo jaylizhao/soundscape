@@ -114,17 +114,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             promptForLanguageChange()
         }
     }
-
-//    private func promptForLanguageChange() {
-//        // Show your language selection screen (OnboardingLanguageView)
-//        // For example:
-//        if let window = self.window {
-//            let languageView = OnboardingLanguageView()
-//            let languageViewController = UIHostingController(rootView: languageView)
-//            window.rootViewController?.present(languageViewController, animated: true, completion: nil)
-//        }
-//    }
     
+    @objc private func languageSelected() {
+        DispatchQueue.main.async {
+            // LocalizationContext.shared.setLanguage(Locale(identifier: UserDefaults.standard.string(forKey: "selectedLanguage") ?? "en"))
+            // LocalizationContext.setLanguage(Locale(identifier: UserDefaults.standard.string(forKey: "selectedLanguage") ?? "en"))
+
+            
+            let mainVC = DynamicLaunchViewController() // Reload main app view
+            self.window?.rootViewController = mainVC
+            self.window?.makeKeyAndVisible()
+        }
+    }
+
     private func promptForLanguageChange() {
         DispatchQueue.main.async {
             if let window = self.window {
