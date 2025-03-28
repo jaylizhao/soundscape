@@ -6,6 +6,7 @@
 //  Licensed under the MIT License.
 //
 
+import Foundation
 import UIKit
 import CocoaLumberjackSwift
 import SwiftUI
@@ -208,6 +209,18 @@ extension AppDelegate {
     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
         GDLogPushInfo("Did fail to register for remote notifications with error: \(error)")
     }
+}
+
+func getPreferredLanguage() -> String {
+    let preferredLanguage = Locale.preferredLanguages.first ?? "en"
+    let supportedLanguages = ["en", "es", "fr"] // just to start!!
+    
+    for language in supportedLanguages {
+        if preferredLanguage.starts(with: language) {
+            return language
+        }
+    }
+    return "en" // Default to English
 }
 
 //import UIKit
