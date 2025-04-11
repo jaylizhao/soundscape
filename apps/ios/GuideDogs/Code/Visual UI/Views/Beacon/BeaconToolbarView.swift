@@ -132,6 +132,21 @@ struct BeaconToolbarView: View {
                     .accessibilityHidden(true) // Included as an accessibility action on the title label
                 }
             }
+
+            // Launch NaviLens (applies to both beacon and route waypoint)
+            if beacon.locationDetail.source.hasNaviLens {
+                Button(action: launchNaviLens, label: {
+                    Image("navilens")
+                        .renderingMode(.template)
+                        .resizable()
+                        .frame(maxWidth: buttonSize, maxHeight: buttonSize, alignment: .center)
+                        .padding(8)
+                        .foregroundColor(.white)
+
+                })
+                .foregroundColor(.white)
+                .accessibilityLabel(GDLocalizedTextView("navilens.title"))
+            }
             
             Spacer()
             
