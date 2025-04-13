@@ -118,28 +118,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     @objc private func languageSelected() {
         DispatchQueue.main.async {
-            // LocalizationContext.shared.setLanguage(Locale(identifier: UserDefaults.standard.string(forKey: "selectedLanguage") ?? "en"))
-            // LocalizationContext.setLanguage(Locale(identifier: UserDefaults.standard.string(forKey: "selectedLanguage") ?? "en"))
-
-            
-            let mainVC = DynamicLaunchViewController() // Reload main app view
+            let mainVC = DynamicLaunchViewController()
             self.window?.rootViewController = mainVC
             self.window?.makeKeyAndVisible()
         }
     }
 
+
     private func promptForLanguageChange() {
         DispatchQueue.main.async {
             if let window = self.window {
-                let languageView = OnboardingLanguageView()
-                let languageViewController = UIHostingController(rootView: languageView)
+                let languageView = OnboardingLanguageView {
+                    self.languageSelected()
+                }
 
-                // Set language selection as the root so it's not dismissed immediately
-                window.rootViewController = languageViewController
+                let languageVC = UIHostingController(rootView: languageView)
+                window.rootViewController = languageVC
                 window.makeKeyAndVisible()
             }
         }
     }
+
+
 
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
         return userActivityManager.onContinueUserActivity(userActivity)
