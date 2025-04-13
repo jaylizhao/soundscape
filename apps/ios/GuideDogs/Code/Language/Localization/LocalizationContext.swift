@@ -376,4 +376,15 @@ extension Locale {
         
         return GDLocalizedString("settings.language.language_name", localizedLanguage, localizedCountry) // "English (United Kingdom)"
     }
+    
+}
+
+extension LocalizationContext {
+    static var isAppLanguageDifferentFromDeviceLanguage: Bool {
+        guard let appLanguage = currentAppLocale.languageCode,
+              let deviceLanguage = Locale.preferredLanguages.first?.prefix(2) else {
+            return false
+        }
+        return appLanguage != deviceLanguage
+    }
 }
