@@ -45,6 +45,11 @@ struct OnboardingLanguageView: View {
         NotificationCenter.default.post(name: NSNotification.Name("LanguageSelected"), object: nil)
     }
     
+    let onContinue: () -> Void
+
+    init(onContinue: @escaping () -> Void = {}) {
+        self.onContinue = onContinue
+    }
 }
 
 struct OnboardingLanguageView_Previews: PreviewProvider {
@@ -52,5 +57,5 @@ struct OnboardingLanguageView_Previews: PreviewProvider {
     static var previews: some View {
         OnboardingLanguageView()
     }
-    
 }
+
