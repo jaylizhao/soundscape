@@ -91,18 +91,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
-    func checkLanguageSettings() {
-            let systemLanguage = Locale.preferredLanguages.first ?? "en"
-            let appLanguage = (UserDefaults.standard.array(forKey: "AppleLanguages") as? [String])?.first ?? "en"
+//    func checkLanguageSettings() {
+//            let systemLanguage = Locale.preferredLanguages.first ?? "en"
+//            let appLanguage = (UserDefaults.standard.array(forKey: "AppleLanguages") as? [String])?.first ?? "en"
+//
+//            if systemLanguage != appLanguage {
+//                // Show the alert to prompt user to change language
+//                if (window?.rootViewController) != nil {
+//                    //let languageCheckVC = 
+//                    //rootViewController.present(languageCheckVC, animated: true)
+//                }
+//            }
+//        }
 
-            if systemLanguage != appLanguage {
-                // Show the alert to prompt user to change language
-                if (window?.rootViewController) != nil {
-                    //let languageCheckVC = 
-                    //rootViewController.present(languageCheckVC, animated: true)
-                }
-            }
+    func checkLanguageSettings() {
+        let systemLanguage = Locale.preferredLanguages.first ?? "en"
+        let appLanguage = (UserDefaults.standard.array(forKey: "AppleLanguages") as? [String])?.first ?? "en"
+
+        if systemLanguage != appLanguage {
+            // If the system language doesn't match the app language, prompt the user to change language
+            promptForLanguageChange()
         }
+    }
 
     // MARK: - Language Check and Prompt
     private func checkAndPromptForLanguage() {
@@ -116,20 +126,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
-    @objc private func languageSelected() {
-        DispatchQueue.main.async {
-            let mainVC = DynamicLaunchViewController()
-            self.window?.rootViewController = mainVC
-            self.window?.makeKeyAndVisible()
-        }
-    }
-
-
     private func promptForLanguageChange() {
         DispatchQueue.main.async {
             if let window = self.window {
                 let languageView = OnboardingLanguageView {
-                    self.languageSelected()
+                    self.languageSelected()  // When the user selects a language
                 }
 
                 let languageVC = UIHostingController(rootView: languageView)
@@ -138,7 +139,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+//   private func promptForLanguageChange() {
+//        DispatchQueue.main.async {
+//            if let window = self.window {
+//                let languageView = OnboardingLanguageView {
+//                    self.languageSelected()
+//                }
+//
+//                let languageVC = UIHostingController(rootView: languageView)
+//                window.rootViewController = languageVC
+//                window.makeKeyAndVisible()
+//            }
+//        }
+//    }
 
+    
+    @objc private func languageSelected() {
+        DispatchQueue.main.async {
+            let mainVC = DynamicLaunchViewController()  // Once language is selected, navigate to the main VC
+            self.window?.rootViewController = mainVC
+            self.window?.makeKeyAndVisible()
+        }
+    }
 
 
     func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {

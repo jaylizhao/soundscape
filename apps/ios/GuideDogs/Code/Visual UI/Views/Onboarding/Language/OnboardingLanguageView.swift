@@ -59,3 +59,10 @@ struct OnboardingLanguageView_Previews: PreviewProvider {
     }
 }
 
+func saveUserPreferredLanguage(_ language: String) {
+    // Save the selected language in UserDefaults or other persistence mechanisms
+    UserDefaults.standard.set([language], forKey: "AppleLanguages")
+    UserDefaults.standard.synchronize()
+}
+
+
