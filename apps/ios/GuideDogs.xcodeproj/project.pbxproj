@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1682D5462DAF383F00E52FC9 /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1682D5452DAF383F00E52FC9 /* LanguageManager.swift */; };
 		2809B80C2379E95B00F6C9AC /* calibration_success.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2809B80B2379E95B00F6C9AC /* calibration_success.wav */; };
 		2809B80E2379E9A000F6C9AC /* connection_success.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2809B80D2379E9A000F6C9AC /* connection_success.wav */; };
 		2809B8102379E9C700F6C9AC /* low_confidence.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2809B80F2379E9C700F6C9AC /* low_confidence.wav */; };
@@ -784,6 +785,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1682D5452DAF383F00E52FC9 /* LanguageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
 		2809B80B2379E95B00F6C9AC /* calibration_success.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = calibration_success.wav; path = Assets/Sounds/calibration_success.wav; sourceTree = "<group>"; };
 		2809B80D2379E9A000F6C9AC /* connection_success.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = connection_success.wav; path = Assets/Sounds/connection_success.wav; sourceTree = "<group>"; };
 		2809B80F2379E9C700F6C9AC /* low_confidence.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = low_confidence.wav; path = Assets/Sounds/low_confidence.wav; sourceTree = "<group>"; };
@@ -1973,6 +1975,7 @@
 				3153765621FF8124008445AD /* PostalAbbreviations.swift */,
 				3153765821FFB2BA008445AD /* DistanceFormatter.swift */,
 				3153765B22013CDA008445AD /* DistanceUnit.swift */,
+				1682D5452DAF383F00E52FC9 /* LanguageManager.swift */,
 			);
 			name = Language;
 			sourceTree = "<group>";
@@ -5234,6 +5237,7 @@
 				C317F2732372307A000579BA /* OfflineBannerViewController.swift in Sources */,
 				288A3AB0255F0506007F1A57 /* AVSpeehSynthesisVoice+Extensions.swift in Sources */,
 				62403FFE24CF4452005CB80D /* PreviewControlViewController.swift in Sources */,
+				1682D5462DAF383F00E52FC9 /* LanguageManager.swift in Sources */,
 				D29832921E4CF18100352A5A /* SuperCategory.swift in Sources */,
 				28246D2521EF9508004C8F09 /* AuthoredActivityMetadata.swift in Sources */,
 				C324BBE122A1E19400C83439 /* SortPredicate.swift in Sources */,
