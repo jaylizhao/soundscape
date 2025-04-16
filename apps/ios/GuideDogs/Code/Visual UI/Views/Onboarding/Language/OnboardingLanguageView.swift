@@ -33,7 +33,19 @@ struct OnboardingLanguageView: View {
             
             LanguagePickerView(selectedLocale: $selectedLocale)
             
-            OnboardingNavigationLink(destination: destination)
+            Button(action: {
+                saveLanguageSelection()
+                onContinue()
+            }) {
+                Text(NSLocalizedString("Continue", comment: ""))
+                    .font(.headline)
+                    .frame(maxWidth: .infinity)
+                    .padding()
+                    .background(Color.white)
+                    .cornerRadius(10)
+                    .padding(.top, 20)
+            }
+
         }
         .onAppear {
             GDATelemetry.trackScreenView("onboarding.language_picker")
