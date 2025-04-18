@@ -31,8 +31,10 @@ struct OnboardingLanguageView: View {
                     .onboardingTextStyle(font: .callout)
             }
             
+            // Allows user to select a preferred language
             LanguagePickerView(selectedLocale: $selectedLocale)
             
+            // Continue button to save new language selection and proceed onto the app
             Button(action: {
                 saveLanguageSelection()
                 onContinue()
@@ -72,7 +74,7 @@ struct OnboardingLanguageView_Previews: PreviewProvider {
 }
 
 func saveUserPreferredLanguage(_ language: String) {
-    // Save the selected language in UserDefaults or other persistence mechanisms
+    // Saves the selected language in UserDefaults or other persistence mechanisms
     UserDefaults.standard.set([language], forKey: "AppleLanguages")
     UserDefaults.standard.synchronize()
 }
